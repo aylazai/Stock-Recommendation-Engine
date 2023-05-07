@@ -1,6 +1,29 @@
-# Stock-Recommendation-Engine
-A larger scale stock recommendation system with Python. I use the three indices; NIFTY50, BOVESPA,  &amp; RTSI in this program as an example. 
-## How it Works
-First, the program requests online stock price data and stores this data into the MySQL database and I keep this scalable so that you can adjust for any number of indices.
-Then we apply the following technical indicators: MACD, Golden Cross, RSI & Long Term SMA. The program then screens all the stocks and prints it's reccommendations.
-Last, I automize the system by first updating the MySQL database and sending an email to the user containing the signals with the smtp library. 
+# Stock Trend Prediction WebApp
+
+This is a Python-based web application that predicts stock trends using a multi-layer LSTM recurrent neural network. The web app uses Streamlit to create a user-friendly graphical interface for inputting stocks and displaying prediction results.
+
+## Installation
+
+To install the necessary packages, please run the following command:
+
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+To run the web app, navigate to the project directory in your terminal and run the following command:
+
+```
+streamlit run app.py
+```
+
+This will launch the web app in your browser. Input the stock you wish to predict and the web app will display the raw data in a table and provide visualizations of the predicted versus original values.
+
+## Methodology
+
+The predictions are made using a multi-layer LSTM recurrent neural network, which predicts the last value out of a sequence of values. The model is trained on historical stock data and uses technical indicators to predict future trends.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
